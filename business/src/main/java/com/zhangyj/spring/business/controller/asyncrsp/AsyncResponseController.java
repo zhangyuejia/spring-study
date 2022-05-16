@@ -1,4 +1,4 @@
-package com.zhangyj.spring.business.asyncrsp;
+package com.zhangyj.spring.business.controller.asyncrsp;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.concurrent.Callable;
 
 /**
+ * 测试返回Callable和普通对象的区别
  * @author zhangyj
  */
 @RestController
