@@ -1,4 +1,4 @@
-package com.zhangyj.spring.business.bean.circularreferences;
+package com.zhangyj.spring.business.circularreferences;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

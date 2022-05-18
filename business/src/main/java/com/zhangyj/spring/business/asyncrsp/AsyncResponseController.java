@@ -1,4 +1,4 @@
-package com.zhangyj.spring.business.controller.asyncrsp;
+package com.zhangyj.spring.business.asyncrsp;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
