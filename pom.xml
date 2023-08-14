@@ -60,7 +60,8 @@
 
     <properties>
         <!--springboot2.1.0.RELEASE到springboot2.1.9使用Greenwich.SR2版本的springcloud,具体的版本匹配参考:(https://start.spring.io/actuator/info)-->
-        <spring-boot.version>2.6.7</spring-boot.version>
+<!--        <spring-boot.version>2.6.7</spring-boot.version>-->
+        <spring-boot.version>3.1.2</spring-boot.version>
     </properties>
 
     <!--版本控制-->
@@ -83,8 +84,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>

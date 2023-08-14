@@ -5,12 +5,12 @@ import com.zhangyj.spring.business.completablefuture.bean.UserInfo;
 import com.zhangyj.spring.business.completablefuture.service.UserInfoService;
 import com.zhangyj.spring.common.bean.http.RequestDto;
 import com.zhangyj.spring.common.util.ThreadUtils;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
