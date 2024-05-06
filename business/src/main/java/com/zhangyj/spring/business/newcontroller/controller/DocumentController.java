@@ -1,14 +1,17 @@
 package com.zhangyj.spring.business.newcontroller.controller;
 
+import cn.hutool.core.io.FileUtil;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Map;
 
 @RestController
 public class DocumentController {
@@ -53,4 +56,24 @@ public class DocumentController {
             return "Error parsing document data";
         }
     }
+
+    @PostMapping("/acceptExcel")
+    public String acceptExcel(@RequestBody Map<String, Object> map) {
+        try {
+            String docName = (String) map.get("fileName");
+
+            String uploadDir = "your-upload-directory"; // 上传目录，根据实际情况修改
+            new File(uploadDir).mkdirs();
+
+            File file = new File(uploadDir, docName);
+            System.out.println(file.getAbsolutePath());
+            String xmlContent = (String) map.get("xmlContent");
+            FileUtil.writeString(xmlContent, file, Charset.defaultCharset());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Error parsing document data";
+        }
+        return "Document saved successfully";
+    }
+
 }
